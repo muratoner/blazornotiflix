@@ -6,8 +6,8 @@ This package uses [javascript notiflix library](https://www.notiflix.com/). It i
 <center>
   <img src="https://user-images.githubusercontent.com/4863567/117049917-71cf4d00-ad1d-11eb-9e82-5af5d47c187f.png" width="250" />
 </center>
-## Demo
 
+## Demo
 
 Add BlazorNotiflix namespace to _Imports.razor file 
 ```csharp
