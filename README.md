@@ -9,6 +9,20 @@ Notiflix is a pure JavaScript library for client-side non-blocking notifications
   <img src="https://user-images.githubusercontent.com/4863567/117049917-71cf4d00-ad1d-11eb-9e82-5af5d47c187f.png" width="250" />
 </center>
 
+## Installation
+
+With Package Manager
+```
+Install-Package BlazorNotiflix
+```
+
+With .NET CLI
+```
+dotnet add package BlazorNotiflix
+```
+
+If you want see other installation options then visit https://www.nuget.org/packages/BlazorNotiflix nuget page.
+
 ## Demo
 
 Add BlazorNotiflix namespace to _Imports.razor file 
