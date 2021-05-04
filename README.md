@@ -29,9 +29,7 @@ If you want see other installation options then visit https://www.nuget.org/pack
 Add js and css definitions in _Host.cshtml file
 
 ````
-...
     <link href="_content/BlazorNotiflix/notiflix.min.css" rel="stylesheet" />
-...
     <script src="_content/BlazorNotiflix/notiflix.min.js"></script>
 ````
 
