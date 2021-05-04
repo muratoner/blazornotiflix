@@ -28,18 +28,18 @@ If you want see other installation options then visit https://www.nuget.org/pack
 ### Step 2
 Add js and css definitions in _Host.cshtml file
 
-````
-    <link href="_content/BlazorNotiflix/notiflix.min.css" rel="stylesheet" />
-    <script src="_content/BlazorNotiflix/notiflix.min.js"></script>
-````
+```html
+<link href="_content/BlazorNotiflix/notiflix.min.css" rel="stylesheet" />
+<script src="_content/BlazorNotiflix/notiflix.min.js"></script>
+```
 
 ## Demo
 
 Add BlazorNotiflix namespace to _Imports.razor file 
 ```c#
-....
+...
 using BlazorNotiflix
-....
+...
 ```
 
 Inject NotificationService in component or page code.
