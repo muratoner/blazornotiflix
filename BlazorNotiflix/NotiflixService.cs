@@ -95,7 +95,7 @@ namespace BlazorNotiflix
 
         #endregion
 
-        #region
+        #region Block
 
         public async Task ShowBlock(ElementReference element, string message = "")
         {
