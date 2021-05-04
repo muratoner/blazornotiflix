@@ -12,7 +12,7 @@ Notiflix says "Notiflix is a pure JavaScript library for client-side non-blockin
 ## Demo
 
 Add BlazorNotiflix namespace to _Imports.razor file 
-```csharp
+```c#
 ....
 using BlazorNotiflix
 ....
@@ -20,7 +20,7 @@ using BlazorNotiflix
 
 Inject NotificationService in component or page code.
 
-```csharp
+```c#
 // You can use with @inject directive
 @inject NotiflixService NotificationService
 
@@ -34,7 +34,8 @@ Inject NotificationService in component or page code.
 
 You can use below any different NotificationService methods.
 
-```csharp
+```c#
+
 <h3>Component1</h3>
 
 @code {
@@ -45,16 +46,53 @@ You can use below any different NotificationService methods.
     {
         if (firstRender)
         {
-            NotificationService.ToastSuccessAsync("[message]", this, nameof(CallbackMethod), "param 1 value", 2222);
+            NotificationService.ToastWarningAsync("[message]");
+            NotificationService.ToastWarningAsync("[message]", this, nameof(CallbackMethodSuccess), "param 1 value", 2222);
+            
+            NotificationService.ToastInfoAsync("[message]");
+            NotificationService.ToastInfoAsync("[message]", this, nameof(CallbackMethodSuccess), "param 1 value", 2222);
+            
+            NotificationService.ToastFailureAsync("[message]");
+            NotificationService.ToastFailureAsync("[message]", this, nameof(CallbackMethodSuccess), "param 1 value", 2222);
+            
+            NotificationService.ToastSuccessAsync("[message]");
+            NotificationService.ToastSuccessAsync("[message]", this, nameof(CallbackMethodSuccess), "param 1 value", 2222);
+            
+            NotificationService.Confirm("[title]", "[message]", "Yes", "No", this, nameof(CallbackMethodSuccess), nameof(CallbackMethodNo), "param1", 1515);
+            
+            NotificationService.ReportFailureAsync("[title]", "[message]");
+            NotificationService.ReportFailureAsync("[title]", "[message]", "OK",  this, nameof(CallbackMethodSuccess),  "param1", 1515);
+            
+            NotificationService.ReportInfoAsync("[title]", "[message]");
+            NotificationService.ReportInfoAsync("[title]", "[message]", "OK",  this, nameof(CallbackMethodSuccess),  "param1", 1515);
+            
+            NotificationService.ReportSuccessAsync("[title]", "[message]");
+            NotificationService.ReportSuccessAsync("[title]", "[message]", "OK",  this, nameof(CallbackMethodSuccess),  "param1", 1515);
+            
+            NotificationService.ReportWarningAsync("[title]", "[message]");
+            NotificationService.ReportWarningAsync("[title]", "[message]", "OK",  this, nameof(CallbackMethodSuccess),  "param1", 1515);
+
+            NotificationService.ShowBlock("css_selector");
+            NotificationService.ShowBlock("css_selector", "[message]");
+            NotificationService.HideBlock("css_selector", 500);
+
+            NotificationService.ShowLoadingAsync();
+            NotificationService.HideLoadingAsync();
         }
 
         return base.OnAfterRenderAsync(firstRender);
     }
 
     [JSInvokable]
-    public void CallbackMethod(string param1, int param2)
+    public void CallbackMethodSuccess(string param1, int param2)
     {
-        // This block run when click button in toast success message
+        // This block run when click button in notiflix toast or dialog
+    }
+    
+    [JSInvokable]
+    public void CallbackMethodNo(string param1, int param2)
+    {
+        // This block run when click negative(No,Cancel etc.) button in notiflix toast or dialog
     }
 }
 ```
