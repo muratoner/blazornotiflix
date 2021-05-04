@@ -4,8 +4,7 @@
 This package uses [javascript notiflix library](https://www.notiflix.com/). It is a package prepared for the integration on the blazor side and as a service on the blazor side.
 
 <center>
-  <img src="![blazor-notiflix-logo](https://user-images.githubusercontent.com/4863567/117049917-71cf4d00-ad1d-11eb-9e82-5af5d47c187f.png)
-" width="250" />
+  <img src="https://user-images.githubusercontent.com/4863567/117049917-71cf4d00-ad1d-11eb-9e82-5af5d47c187f.png" width="250" />
 </center>
 ## Demo
 
