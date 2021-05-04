@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+		<id>BlazorNotiflix</id>
+		<version>1.0.0.5</version>
+		<description>This package uses javascript notiflix library. It is a package prepared for the integration on the blazor side and as a service on the blazor side.Notiflix is a pure JavaScript library for client-side non-blocking notifications, popup boxes, loading indicators, and more to that makes your web projects much better.</description>
+		<authors>Murat Öner</authors>
+        <iconUrl>https://user-images.githubusercontent.com/4863567/117049917-71cf4d00-ad1d-11eb-9e82-5af5d47c187f.png?raw=true</iconUrl>
+		<projectUrl>https://github.com/muratoner/blazornotiflix</projectUrl>
+	</metadata>
+</package>
