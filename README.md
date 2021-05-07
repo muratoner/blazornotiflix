@@ -1,7 +1,7 @@
 
 # Blazor Notiflix
 
-This package uses [javascript notiflix library](https://www.notiflix.com/). It is a package prepared for the integration on the blazor side and as a service on the blazor side.
+This blazor package uses [javascript notiflix library](https://www.notiflix.com/). It is a package prepared for the integration on the blazor side and as a service on the blazor side.
 
 Notiflix is a pure JavaScript library for client-side non-blocking notifications, popup boxes, loading indicators, and more to that makes your web projects much better.
 
@@ -23,7 +23,7 @@ With .NET CLI
 dotnet add package BlazorNotiflix
 ```
 
-If you want see other installation options then visit https://www.nuget.org/packages/BlazorNotiflix nuget page.
+If you want see other installation options then visit https://www.nuget.org/packages/BlazorNotiflix nuget page
 
 ### Step 2
 Add js and css definitions in _Host.cshtml file
@@ -42,7 +42,7 @@ using BlazorNotiflix
 ...
 ```
 
-Inject NotificationService in component or page code.
+Inject NotificationService in component or page code
 
 ```c#
 // You can use with @inject directive
