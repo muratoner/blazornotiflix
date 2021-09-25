@@ -38,8 +38,44 @@ Add js and css definitions in _Host.cshtml file
 Add BlazorNotiflix namespace to _Imports.razor file 
 ```c#
 ...
-using BlazorNotiflix
+@using BlazorNotiflix
 ...
+```
+
+Add NotiflixService to Dependency Injection in Startup.cs file
+
+```c#
+using BlazorNotiflix;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+
+namespace Project
+{
+    public class Startup
+    {
+        public Startup(IConfiguration configuration)
+        {
+            Configuration = configuration;
+        }
+
+        public IConfiguration Configuration { get; }
+
+        public void ConfigureServices(IServiceCollection services)
+        {
+            ...
+            // ADD THIS LINE
+            services.AddSingleton<NotiflixService>();
+            ...
+        }
+
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        {
+            ...
+        }
+    }
+}
 ```
 
 Inject NotificationService in component or page code
