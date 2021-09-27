@@ -66,7 +66,7 @@ namespace Project
         {
             ...
             // ADD THIS LINE
-            services.AddSingleton<NotiflixService>();
+            services.AddScoped<NotiflixService>();
             ...
         }
 
